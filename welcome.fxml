@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.shape.Circle?>
+
+<StackPane xmlns:fx="http://javafx.com/fxml"
+           fx:controller="com.example.rastuarent.HomeController"
+           style="-fx-background-color: #f8f9fa;"> <Circle radius="200" fill="#e8f5e9" StackPane.alignment="TOP_RIGHT" translateX="80" translateY="-80"/>
+    <Circle radius="120" fill="#f1f8e9" StackPane.alignment="BOTTOM_LEFT" translateX="-40" translateY="40"/>
+
+    <VBox alignment="CENTER" spacing="35" style="-fx-padding: 60;">
+
+        <VBox alignment="CENTER" spacing="15">
+            <ImageView fitHeight="140" preserveRatio="true">
+                <image>
+                    <Image url="@images/logoo.jpg"/>
+                </image>
+            </ImageView>
+            <HBox alignment="CENTER">
+                <Separator maxWidth="40" style="-fx-opacity: 0.5;"/>
+                <Label text="  EST. 2024  " style="-fx-text-fill: #adb5bd; -fx-font-size: 10px; -fx-letter-spacing: 2px;"/>
+                <Separator maxWidth="40" style="-fx-opacity: 0.5;"/>
+            </HBox>
+        </VBox>
+
+        <VBox alignment="CENTER" spacing="8">
+            <Label text="FINE DINING EXPERIENCE"
+                   style="-fx-font-family: 'Verdana'; -fx-font-size: 12px; -fx-text-fill: #2e7d32; -fx-letter-spacing: 5px; -fx-font-weight: bold;"/>
+
+            <Label text="RESTAURANT SYSTEM"
+                   style="-fx-font-family: 'Segoe UI Semibold'; -fx-font-size: 34px; -fx-text-fill: #343a40;"/>
+
+            <Label text="Manage your kitchen with elegance."
+                   style="-fx-font-size: 15px; -fx-text-fill: #6c757d;"/>
+        </VBox>
+
+        <Button text="ENTER SYSTEM"
+                onAction="#openLogin"
+                prefWidth="240"
+                style="-fx-background-color: #e67e22; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 15px; -fx-background-radius: 8; -fx-padding: 15; -fx-cursor: hand; -fx-effect: dropshadow(three-pass-box, rgba(230, 126, 34, 0.3), 15, 0, 0, 8);"/>
+
+    </VBox>
+
+</StackPane>

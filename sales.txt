@@ -1,0 +1,13 @@
+
+==============================
+DATE: 2026-03-10T03:34:27.649561100
+Items Sold:
+Rice & Beef x 2 = M100
+Rice & Chicken x 1 = M60
+Macaroni & Beef x 2 = M110
+Cupcake (M10)
+
+TOTAL: M280.0
+PAID: M300.0
+CHANGE: M20.0
+==============================

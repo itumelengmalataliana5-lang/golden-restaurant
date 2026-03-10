@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="TOP_CENTER"
+      spacing="20"
+      xmlns:fx="http://javafx.com/fxml/1"
+      xmlns="http://javafx.com/javafx/23.0.1"
+      fx:controller="com.example.rastuarent.RestaurantController"
+      style="-fx-padding:20; -fx-background-color: linear-gradient(to bottom right,#ffe4c4,#ffdead);">
+
+    <!-- ================= LOGO ================= -->
+    <VBox spacing="6" style="-fx-padding:6;">
+        <ImageView fitHeight="60" fitWidth="120">
+            <image>
+                <Image url="@images/logoo.jpg"/>
+            </image>
+        </ImageView>
+    </VBox>
+
+    <GridPane alignment="CENTER" hgap="25" vgap="25">
+
+        <!-- ================= DINNER ================= -->
+        <TitledPane text="DINNER"
+                    style="-fx-font-size:16px; -fx-font-weight:bold; -fx-text-fill:#5d4037;"
+                    GridPane.columnIndex="0" GridPane.rowIndex="0">
+
+            <VBox spacing="10" style="-fx-padding:10;">
+
+                <HBox spacing="10" alignment="CENTER_LEFT">
+                    <ImageView fitHeight="60" fitWidth="120">
+                        <image>
+                            <Image url="@images/img.png"/>
+                        </image>
+                    </ImageView>
+                    <CheckBox fx:id="chkFood1" text="Chicken Meal"/>
+                    <Spinner fx:id="qtyFood1" prefWidth="60"/>
+                </HBox>
+
+                <HBox spacing="10" alignment="CENTER_LEFT">
+                    <ImageView fitHeight="60" fitWidth="120">
+                        <image>
+                            <Image url="@images/img_1.png"/>
+                        </image>
+                    </ImageView>
+                    <CheckBox fx:id="chkFood2" text="Burger Meal"/>
+                    <Spinner fx:id="qtyFood2" prefWidth="60"/>
+                </HBox>
+
+                <HBox spacing="10" alignment="CENTER_LEFT">
+                    <ImageView fitHeight="60" fitWidth="120">
+                        <image>
+                            <Image url="@images/img.png"/>
+                        </image>
+                    </ImageView>
+                    <CheckBox fx:id="chkFood3" text="Steak Meal"/>
+                    <Spinner fx:id="qtyFood3" prefWidth="60"/>
+                </HBox>
+
+            </VBox>
+        </TitledPane>
+
+        <!-- ================= DESSERT ================= -->
+        <TitledPane text="DESSERT"
+                    style="-fx-font-size:16px; -fx-font-weight:bold; -fx-text-fill:#6a1b9a;"
+                    GridPane.columnIndex="1" GridPane.rowIndex="0">
+
+            <VBox spacing="10" alignment="CENTER" style="-fx-padding:10;">
+
+                <ImageView fitHeight="60" fitWidth="120">
+                    <image>
+                        <Image url="@images/img_1.png"/>
+                    </image>
+                </ImageView>
+
+                <RadioButton fx:id="rbDessert1" text="Ice Cream"/>
+                <RadioButton fx:id="rbDessert2" text="Chocolate Cake"/>
+                <RadioButton fx:id="rbDessert3" text="Cupcake"/>
+
+            </VBox>
+        </TitledPane>
+
+        <!-- ================= DRINKS ================= -->
+        <TitledPane text="DRINKS"
+                    style="-fx-font-size:16px; -fx-font-weight:bold; -fx-text-fill:#0277bd;"
+                    GridPane.columnIndex="0" GridPane.rowIndex="1">
+
+            <VBox spacing="10" style="-fx-padding:10;">
+                <ComboBox fx:id="comboDrinks" promptText="Select Drink"/>
+            </VBox>
+        </TitledPane>
+
+        <!-- ================= PAYMENT ================= -->
+        <VBox spacing="10"
+              style="-fx-padding:10;"
+              GridPane.columnIndex="1"
+              GridPane.rowIndex="1">
+
+            <TextField fx:id="txtTotal" promptText="Total Amount"/>
+            <TextField fx:id="txtPaid" promptText="Amount Tendered"/>
+            <TextField fx:id="txtChange" promptText="Change"/>
+
+        </VBox>
+
+        <!-- ================= BUTTONS ================= -->
+        <HBox spacing="15"
+              alignment="CENTER"
+              GridPane.columnSpan="2"
+              GridPane.rowIndex="2">
+
+            <Button text="Total Amount"
+                    onAction="#calculateTotal"
+                    style="-fx-background-color:#ff8a65; -fx-text-fill:white; -fx-font-weight:bold;"/>
+
+            <Button text="Change"
+                    onAction="#calculateChange"
+                    style="-fx-background-color:#4db6ac; -fx-text-fill:white; -fx-font-weight:bold;"/>
+
+            <Button text="Reset"
+                    onAction="#resetSystem"
+                    style="-fx-background-color:#f06292; -fx-text-fill:white; -fx-font-weight:bold;"/>
+
+            <Button text="Exit"
+                    onAction="#exitSystem"
+                    style="-fx-background-color:#ef5350; -fx-text-fill:white; -fx-font-weight:bold;"/>
+
+            <Button text="View Sales"
+                    onAction="#openFileManager"
+                    style="-fx-background-color:#42a5f5; -fx-text-fill:white; -fx-font-weight:bold;"/>
+
+        </HBox>
+
+    </GridPane>
+
+</VBox>

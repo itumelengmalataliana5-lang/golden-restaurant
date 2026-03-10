@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.Rectangle?>
+
+<StackPane xmlns:fx="http://javafx.com/fxml"
+           fx:controller="com.example.rastuarent.SignupController"
+           style="-fx-background-color: #f8f9fa;">
+
+    <VBox alignment="TOP_CENTER">
+        <Rectangle width="2000" height="6" fill="#2e7d32" />
+    </VBox>
+
+    <VBox alignment="CENTER" spacing="30" style="-fx-padding: 50;">
+
+        <VBox alignment="CENTER" spacing="5">
+            <Label text="JOIN THE TEAM"
+                   style="-fx-font-family: 'Verdana'; -fx-font-size: 11px; -fx-text-fill: #e67e22; -fx-letter-spacing: 3px; -fx-font-weight: bold;"/>
+            <Label text="Create Account"
+                   style="-fx-font-family: 'Segoe UI Semibold'; -fx-font-size: 28px; -fx-text-fill: #343a40;"/>
+        </VBox>
+
+        <VBox maxWidth="380" spacing="20"
+              style="-fx-background-color: white; -fx-padding: 40; -fx-background-radius: 15; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.05), 20, 0, 0, 10);">
+
+            <VBox spacing="8">
+                <Label text="New Username" style="-fx-text-fill: #6c757d; -fx-font-size: 13px;"/>
+                <TextField fx:id="txtUsername" promptText="Choose a unique name"
+                           style="-fx-background-color: #ffffff; -fx-border-color: #dee2e6; -fx-border-width: 0 0 1 0; -fx-padding: 8 0 8 0; -fx-font-size: 14px;"/>
+            </VBox>
+
+            <VBox spacing="8">
+                <Label text="Secure Password" style="-fx-text-fill: #6c757d; -fx-font-size: 13px;"/>
+                <PasswordField fx:id="txtPassword" promptText="At least 8 characters"
+                               style="-fx-background-color: #ffffff; -fx-border-color: #dee2e6; -fx-border-width: 0 0 1 0; -fx-padding: 8 0 8 0; -fx-font-size: 14px;"/>
+            </VBox>
+
+            <VBox spacing="15" alignment="CENTER" style="-fx-padding: 10 0 0 0;">
+                <Button text="REGISTER NOW" onAction="#handleSignup" prefWidth="300"
+                        style="-fx-background-color: #2e7d32; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 5; -fx-padding: 12; -fx-cursor: hand;"/>
+
+                <Button text="← Back to Login" onAction="#backToLogin"
+                        style="-fx-background-color: transparent; -fx-text-fill: #adb5bd; -fx-font-size: 12px; -fx-cursor: hand;"/>
+            </VBox>
+        </VBox>
+
+        <Label fx:id="lblMessage" text="" style="-fx-text-fill: #d63031; -fx-font-size: 13px;"/>
+
+    </VBox>
+</StackPane>
